@@ -1,0 +1,93 @@
+{
+  "agent": {
+    "max_training_steps": 10e6,
+    "epsilon_decay_final_step": 1000000,
+    "experience_memory_capacity": 1e5,
+    "replay_start_size": 50000,
+    "replay_batch_size": 32,
+    "use_target_network": true,
+    "target_network_update_freq": 10000,
+    "lr": 0.00025,
+    "gamma": 0.99,
+    "epsilon_max": 1.0,
+    "epsilon_min": 0.1,
+    "clip_rewards": true,
+    "seed": 555,
+    "use_cuda": true,
+    "summary_file_path_prefix": "logs/DQL_",
+    "load_trained_model": true,
+    "load_dir": "trained_models/",
+    "save_dir": "trained_models/",
+    "save_freq_when_perf_improves": 50
+  },
+  "env": {
+    "type": "Atari",
+    "episodic_life": true,
+    "skip_rate": 4,
+    "num_frames_to_stack": 4,
+    "render": false,
+    "normalize_observation": false,
+    "useful_region": {
+        "Default":{
+                "crop1": 34,
+                "crop2": 34,
+                "dimension2": 80
+                },
+        "Asteroids": {
+                   "crop1": 16,
+                   "crop2": 34,
+                   "dimension2": 94
+                   },
+        "BeamRider": {
+                   "crop1": 20,
+                   "crop2": 20,
+                   "dimension2": 80
+                   },
+        "Breakout": {
+                  "crop1": 34,
+                  "crop2": 34,
+                  "dimension2": 80
+                  },
+        "Centipede": {
+          "crop1": 36,
+          "crop2": 56,
+          "dimension2": 90
+        },
+        "MsPacman": {
+          "crop1": 2,
+          "crop2": 10,
+          "dimension2": 84
+        },
+        "Pong": {
+          "crop1": 34,
+          "crop2": 34,
+          "dimension2": 80
+        },
+        "Seaquest": {
+          "crop1": 30,
+          "crop2": 30,
+          "dimension2": 80
+        },
+        "SpaceInvaders": {
+          "crop1": 8,
+          "crop2": 36,
+          "dimension2": 94
+        },
+        "VideoPinball": {
+          "crop1": 42,
+          "crop2": 60,
+          "dimension2": 89
+        },
+        "Qbert": {
+          "crop1": 12,
+          "crop2": 40,
+          "dimension2": 94
+        },
+        "Boxing": {
+          "crop1": 30,
+          "crop2": 30,
+          "dimension2": 80
+        }
+      }
+    }
+}

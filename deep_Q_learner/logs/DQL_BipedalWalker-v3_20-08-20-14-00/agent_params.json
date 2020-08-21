@@ -1,0 +1,21 @@
+{
+    "clip_rewards": true,
+    "epsilon_decay_final_step": 1000000,
+    "epsilon_max": 1.0,
+    "epsilon_min": 0.1,
+    "experience_memory_capacity": 100000.0,
+    "gamma": 0.99,
+    "load_dir": "trained_models/",
+    "load_trained_model": true,
+    "lr": 0.00025,
+    "max_training_steps": 10000000.0,
+    "replay_batch_size": 32,
+    "replay_start_size": 50000,
+    "save_dir": "trained_models/",
+    "save_freq_when_perf_improves": 50,
+    "seed": 555,
+    "summary_file_path_prefix": "logs/DQL_",
+    "target_network_update_freq": 10000,
+    "use_cuda": true,
+    "use_target_network": true
+}
