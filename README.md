@@ -6,11 +6,11 @@ Reinforcement learning (RL) is an area of machine learning concerned with how so
 
 Reinforcement learning differs from supervised learning in not needing labelled input/output pairs be presented, and in not needing sub-optimal actions to be explicitly corrected. Instead the focus is on finding a balance between exploration (of uncharted territory) and exploitation (of current knowledge).
 
-![index](https://www.dropbox.com/s/dvkjmebnvsu9v3l/mathworks-reinforcement-learning-fig1-543.jpg?dl=1)
+![index](/images_gif/mathworks-reinforcement-learning-fig1-543.jpg)
 
 The environment is typically stated in the form of a Markov decision process (MDP), because many reinforcement learning algorithms for this context utilize dynamic programming techniques. The main difference between the classical dynamic programming methods and reinforcement learning algorithms is that the latter do not assume knowledge of an exact mathematical model of the MDP and they target large MDPs where exact methods become infeasible.
 
-![index](https://www.dropbox.com/s/j5lecpqk4dofjmr/dn-7.9.png?dl=1)
+![index](/images_gif/dn-7.9.png)
 
 ### Our learning map
 
@@ -52,7 +52,7 @@ A learning environment is an integral component of a system where anintelligent 
 OpenAI Gym is an open source toolkit that provides a diverse collection of tasks, called environments, with a common interface for developing and testing your intelligent agent algorithms. The toolkit introduces a standardApplication Programming Interface (API) for interfacing with environments designed for reinforcement learning. Each environment has aversion attached to it, which ensures meaningful comparisons andre producible results with the evolving algorithms and the environments themselves. The Gym toolkit, through its various environments, provides an episodic setting for reinforcement learning, where an agent's experience is broken down into a series of episodes. In each episode, the initial state of the agents randomly sampled from a distribution, and the interaction between the agent and the environment proceeds until the environment reaches a terminal state. Some of the basic environments available in the OpenAI Gym library are shown in the following screenshot:
 (We will use some of these environments in our examples.)
 
-![index](https://www.dropbox.com/s/gdi68cgbjssnc99/b0f8b8c7-aca7-456b-a63b-9e57c4e203fb.png?dl=1)
+![index](/images_gif/b0f8b8c7-aca7-456b-a63b-9e57c4e203fb.png)
 
 ### Understanding the features of OpenAI Gym
 
@@ -97,7 +97,7 @@ env.render()
 
 This will bring up a window like this :
 
-![](https://www.dropbox.com/s/13uyuoneyxcslcq/1%2ALnQ5sRu-tJmlvRWmDsdSvw.gif?dl=1)
+![a](/images_gif/1*LnQ5sRu-tJmlvRWmDsdSvw.gif)
 
 Hooray!
 
@@ -116,13 +116,14 @@ In the reinforcement learning world, a machine is run or instructed by a(softwar
 A reward, denoted by , is usually a scalar quantity that is provided as feedback to the agent to drive its learning. The goal of the agent is to maximize the sum of the reward, and this signal indicates how well the agent is doing at time step . The following examples of reward signals for different tasks may help you get a more intuitive understanding:For the Atari games we discussed before, or any computer games in general, the reward signal can be +1 for every increase in score and -1for every decrease in score.For stock trading, the reward signal can be +1 for each dollar gained and-1 for each dollar lost by the agent.For driving a car in simulation, the reward signal can be +1 for every mile driven and -100 for every collision.Sometimes, the reward signal can be sparse. For example, for a game of chess or Go, the reward signal could be +1 if the agent wins the game and -1 if the agent loses the game. The reward is sparse because the agent receives the reward signal only after it completes one full game,not knowing how good each move it made was.
 
 * Environment :
-In the first chapter, we looked into the different environments provided by theOpenAI Gym toolkit. You might have been wondering why they were called environments instead of problems, or tasks, or something else. Now that you have progressed to this chapter, does it ring a bell in your head?The environment is the platform that represents the problem or task that weare interested in, and with which the agent interacts. The following diagram shows the general reinforcement learning paradigm at the highest level of abstraction: ![index](https://www.dropbox.com/s/qv8vxdbc2v3u1gy/Screenshot_2020-08-20_17-03-16.png?dl=1) At each time step, denoted by , the agent receives an observation from the environment and then executes an action , for which it receives a scalar reward back from the environment, along with the next observation ,and then this process repeats until a terminal state is reached. What is an observation and what is a state? Let's look into that next.
+In the first chapter, we looked into the different environments provided by theOpenAI Gym toolkit. You might have been wondering why they were called environments instead of problems, or tasks, or something else. Now that you have progressed to this chapter, does it ring a bell in your head?The environment is the platform that represents the problem or task that weare interested in, and with which the agent interacts. The following diagram shows the general reinforcement learning paradigm at the highest level of abstraction: ![index](/images_gif/Screenshot_2020-08-20_17-03-16.png) At each time step, denoted by , the agent receives an observation from the environment and then executes an action , for which it receives a scalar reward back from the environment, along with the next observation ,and then this process repeats until a terminal state is reached. What is an observation and what is a state? Let's look into that next.
 
 * State :
 As the agent interacts with an environment, the process results in a sequence of observations (teta[i]), actions (A[i]), and rewards (R[i]), as described previously. At some time step "t", what the agent knows so far is the sequence of teta[i], A[i], and R[i] that it observed until time step . It intuitively makes sense to call this the history:
 H[t] = {teta[1], A[1], R[1]}, {teta[2], A[2], R[2]}, ..., {teta[t], A[t], R[t]}
 What happens next at time step "t+1" depends on the history. Formally, the information used to determine what happens next is called the state. Because it depends on the history up until that time step, it can be denoted as follows:
-S[t] = f(H[t]), Here, f() denotes some function. There is one subtle piece of information that is important for you to understand before we proceed. Let's have another look at the general representation of a reinforcement learning system: ![index](https://www.dropbox.com/s/28khr3v029ruva2/Screenshot_2020-08-20%20Hands-On%20Intelligent%20Agents%20with%20OpenAI%20Gym%20Your%20guide%20to%20developing%20AI%20agents%20using%20deep%20reinforceme%5B...%5D%281%29.png?dl=1)
+S[t] = f(H[t]), Here, f() denotes some function. There is one subtle piece of information that is important for you to understand before we proceed. Let's have another look at the general representation of a reinforcement learning system:
+![index](/images_gif/Screenshot_2020-08-20 Hands-On Intelligent Agents with OpenAI Gym Your guide to developing AI agents using deep reinforceme[...](1).png)
 Now, you will notice that the two main entities in the system, the agent and the environment, each has its own representation of the state. The environment state, sometimes denoted by , S[t]^e is the environment's own(private) representation, which the environment uses to pick the next
 observation and reward. This state is not usually visible/available to the agent. Likewise, the agent has its own internal representation of the state, sometimes denoted by S[t]^a, which is the information used by the agent to baseits actions on. Because this representation is internal to the agent, it is up tothe agent to use any function to represent it. Typically, it is some function based on the history that the agent has observed so far. On a related note,a Markov stateis a representation of the state using all the useful informationfrom the history. By definition, using the Markov property, a state  is Markov or Markovian if, and only if, P[S[t+1] | S[t]] = P[S[t+1] | S[1], S[2], ..., S[t]] , which meansthat the future is independent of the past given the present. In other words, such a state is a sufficient statistic of the future. Once the state is known, the history can be thrown away. Usually, the environment state, S[t]^e, and thehistory, H[t], satisfy the Markov property. In some cases, the environment may make its internal environmental state directly visible to the agent. Such environments are called fully observable environments. In cases where the agent cannot directly observe the environment state, the agent must construct its own state representation from what it observes. Such environments are called partially observable environments. For example, an agent playing poker can only observe the public cards and not the cards the other players possess. Therefore, it is apartially observed environment. Similarly, an autonomous car with just acamera does not know its absolute location in its environment, which makesthe environment only partially observable. In the next sections, we will learn about some of the key components of anagent.
 
@@ -154,13 +155,13 @@ So far we have studied reinforcement learning and the OpenAI gym module.
 Now is the time to move on to concrete examples.
 
 * **Draft_environments**
-![index](https://www.dropbox.com/s/5etsaxz3uegsoah/ezgif.com-resize.gif?dl=1)
+![index](/images_gif/as/ezgif.com-resize.gif)
 
 * **Mountain_Car**
-![index](https://www.dropbox.com/s/5ggbrgwaiodj7lp/1.gif?dl=1) ![index](https://www.dropbox.com/s/dbga3mk4ni9e4o9/2.gif?dl=1)
+![index](/images_gif/as/1.gif) ![index](/images_gif/as/2.gif)
 
 * **deep_Q_learner**
-![index](https://www.dropbox.com/s/nc92r9cee951sk6/3.gif?dl=1)
+![index](/images_gif/as/3.gif)
 
 Scroll through the figure, sequentially. Lets start then :)
 
