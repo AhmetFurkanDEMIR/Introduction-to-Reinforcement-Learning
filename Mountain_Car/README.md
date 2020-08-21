@@ -84,11 +84,11 @@ env.close()
 
 If you run the preceding script, you will see the Mountain Car environment come up in a new window and the car moving left and right randomly for 1,000 episodes. You will also see the episode number, steps taken, and the total reward obtained printed at the end of every episode, as shown in the following screenshot:
 
-![index](https://www.dropbox.com/s/6u9yfi540jnrw7s/a.png?dl=1)
+![index](/images_gif/as/a.png)
 
 The sample output should look similar to the following screenshot:
 
-![index](https://www.dropbox.com/s/r0u4o96qmhoydvd/b.png?dl=1)
+![index](/images_gif/as/1.gif)
 
 You should recall from our previous section that the agent gets a reward of -1 for each step and that the MountainCar-v0 environment will terminate the episode after 200 steps; this is why you the agent may sometimes get a total reward of -200! After all, the agent is taking random actions without thinking or learning from its previous actions. Ideally, we would want the agent to figure out how to reach the top of the mountain (near the flag, close to, at, or beyond position 0.5) with the minimum number of steps. Don't worry - we will build such an intelligent agent by the end of this chapter! Let's move on by having a look at what Q-learning section.
 
@@ -192,5 +192,5 @@ if __name__ == "__main__":
 
 If you run the python script called Q_learner_MountainCar.py, the tutorial starts. and you can test later.
 
-![index](https://www.dropbox.com/s/5ggbrgwaiodj7lp/1.gif?dl=1) ![index](https://www.dropbox.com/s/dbga3mk4ni9e4o9/2.gif?dl=1)
+![index](/images_gif/as/1.gif) ![index](/images_gif/as/2.gif)
 
