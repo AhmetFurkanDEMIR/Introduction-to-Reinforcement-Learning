@@ -123,7 +123,9 @@ As the agent interacts with an environment, the process results in a sequence of
 H[t] = {teta[1], A[1], R[1]}, {teta[2], A[2], R[2]}, ..., {teta[t], A[t], R[t]}
 What happens next at time step "t+1" depends on the history. Formally, the information used to determine what happens next is called the state. Because it depends on the history up until that time step, it can be denoted as follows:
 S[t] = f(H[t]), Here, f() denotes some function. There is one subtle piece of information that is important for you to understand before we proceed. Let's have another look at the general representation of a reinforcement learning system:
+
 ![index](/images_gif/Screenshot_2020-08-20 Hands-On Intelligent Agents with OpenAI Gym Your guide to developing AI agents using deep reinforceme[...](1).png)
+
 Now, you will notice that the two main entities in the system, the agent and the environment, each has its own representation of the state. The environment state, sometimes denoted by , S[t]^e is the environment's own(private) representation, which the environment uses to pick the next
 observation and reward. This state is not usually visible/available to the agent. Likewise, the agent has its own internal representation of the state, sometimes denoted by S[t]^a, which is the information used by the agent to baseits actions on. Because this representation is internal to the agent, it is up tothe agent to use any function to represent it. Typically, it is some function based on the history that the agent has observed so far. On a related note,a Markov stateis a representation of the state using all the useful informationfrom the history. By definition, using the Markov property, a state  is Markov or Markovian if, and only if, P[S[t+1] | S[t]] = P[S[t+1] | S[1], S[2], ..., S[t]] , which meansthat the future is independent of the past given the present. In other words, such a state is a sufficient statistic of the future. Once the state is known, the history can be thrown away. Usually, the environment state, S[t]^e, and thehistory, H[t], satisfy the Markov property. In some cases, the environment may make its internal environmental state directly visible to the agent. Such environments are called fully observable environments. In cases where the agent cannot directly observe the environment state, the agent must construct its own state representation from what it observes. Such environments are called partially observable environments. For example, an agent playing poker can only observe the public cards and not the cards the other players possess. Therefore, it is apartially observed environment. Similarly, an autonomous car with just acamera does not know its absolute location in its environment, which makesthe environment only partially observable. In the next sections, we will learn about some of the key components of anagent.
 
@@ -155,12 +157,15 @@ So far we have studied reinforcement learning and the OpenAI gym module.
 Now is the time to move on to concrete examples.
 
 * **Draft_environments**
+
 ![index](/images_gif/as/ezgif.com-resize.gif)
 
 * **Mountain_Car**
+
 ![index](/images_gif/as/1.gif) ![index](/images_gif/as/2.gif)
 
 * **deep_Q_learner**
+
 ![index](/images_gif/as/3.gif)
 
 Scroll through the figure, sequentially. Lets start then :)
