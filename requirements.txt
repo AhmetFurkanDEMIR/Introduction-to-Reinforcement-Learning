@@ -1,0 +1,4 @@
+gym==0.7.4
+numpy==1.19.1
+pytorch==1.0.2
+tensorboardX==2.1
