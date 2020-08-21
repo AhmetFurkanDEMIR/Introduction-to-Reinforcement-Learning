@@ -76,7 +76,7 @@ for _ in range(1000):
     env.step(env.action_space.sample())
 ```
 
-![index](https://www.dropbox.com/s/qhhmx5bl6qa7h2o/ezgif.com-video-to-gif.gif?dl=1)
+![index](/images_gif/as/ezgif.com-video-to-gif.gif)
 
 * Proceed to the NVIDIA website and install the NVIDIA driver, CUDA and cuDNN software.
 
@@ -115,7 +115,7 @@ your Gym installation, sorted alphabetically. You can run this script using the 
 
 The environments installed on your system will be displayed on the console.
 
-![index](https://www.dropbox.com/s/21zjl4ddz9s37pb/Screenshot_2020-08-21_10-50-34.png?dl=1)
+![index](/images_gif/Screenshot_2020-08-21_10-50-34.png)
 
 I have 859 media installed.
 
@@ -165,7 +165,7 @@ The name of the environment to be worked on and how many cycles to run are taken
 ~$python3 run_gym_env.py Alien-ram-v0 2000
 ```
 
-![index](https://www.dropbox.com/s/mb5l0byaopmyiky/Screenshot_2020-08-21_11-14-17.png?dl=1)
+![index](/images_gif/Screenshot_2020-08-21_11-14-17.png)
 
 After the environment is started and our agent makes 2000 moves, the environment is closed.
 
@@ -246,7 +246,7 @@ for episode in range(MAX_NUM_EPISODES):
 When you run this script, you will notice a Qbert screen pop up and Qbert
 taking random actions and getting a score, as shown here:
 
-![index](https://www.dropbox.com/s/h1m4wu5ybnhb022/ezgif.com-video-to-gif%281%29.gif?dl=1)
+![index](/images_gif/as/ezgif.com-video-to-gif(1).gif)
 
 ## Spaces in the Gym
 
