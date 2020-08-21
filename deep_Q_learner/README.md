@@ -41,7 +41,7 @@ The [deep_Q_learner.py](./deep_Q_learner.py) is the main script that takes care 
     ![asd](trained_models/results/RiverraidNoFrameskip-v4.gif)
     
     
-* You can train and test by entering other environments into the env variable of the data as an argument.
+* By entering other environments in the env argument, you can test and train in the environment you want.
 Sample : `python deep_Q_learner.py --env SpaceInvaders-v0 --gpu-id 0` , `python deep_Q_learner.py --env SpaceInvaders-v0 --test --render --record`
 
 ![index](/images_gif/asdddd.gif)
